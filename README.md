@@ -1,5 +1,5 @@
-# js-photo-blog
-"JS photo blog" exercise
+# Photo Blog
+(Esercizio)
 
 ## Traccia
 
@@ -16,5 +16,10 @@ Inseriamo un foglio JavaScript ed effettuiamo una chiamata AJAX all’API, sfrut
 ### Bonus
 Rendi la pagina responsive, in modo che su mobile e tablet le foto si dispongano man mano una sotto l’altra ed il titolo abbia una dimensione adeguata
 
-#### Font titoli
-    ‘Edu Tas Beginner’, sans-serif;d ate: ‘Sometype Mono’, ‘monospace’;
+## Fonts
+
+### Titoli
+    'Edu Tas Beginner', sans-serif;
+
+### Date
+    'Sometype Mono', monospace;
