@@ -18,7 +18,7 @@ fetchPictureData(ENDPOINT_URL, pictureObjectsArray, loadCards);
     /**
      * Fetch pictures data
      * @param {string} endpointURL Endpoint URL from which to fetch pictures data
-     * @param {Array} targetObjectsArray Array from which to assign fetched results
+     * @param {Array} targetObjectsArray Array to which to assign fetched results
      * @callback callbackFunction Callback function to invoke after fetching all data
      */
     function fetchPictureData(endpointURL, targetObjectsArray, callbackFunction) {
@@ -74,7 +74,7 @@ fetchPictureData(ENDPOINT_URL, pictureObjectsArray, loadCards);
             albumHTML +=
                 `
                 <!-- #region Album column -->
-                <div class="col-4">
+                <div class="responsive-column">
 
                     <!-- #region Card -->
                     <section class="card">

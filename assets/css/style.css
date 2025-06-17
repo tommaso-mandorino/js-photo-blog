@@ -46,13 +46,10 @@
 
 /* #region Utility classes */
 
+    /* Container */
     .container {
         margin: 0 auto;
         max-width: 70%;
-    }
-
-    .col-4 {
-        width: calc(100% / 12 * 4);
     }
 
 /* #endregion Utility classes */
@@ -79,7 +76,6 @@
 
                 /* Typography */
                 text-align: center;
-                font-size: 3rem;
 
                 /* Homepage link */
                 a {
@@ -97,6 +93,7 @@
                         /* Typography */
                         text-transform: uppercase;
                         font-family: 'Edu Tas Beginner', sans-serif;
+                        font-size: 3rem;
                     }
 
                 }
@@ -179,3 +176,43 @@
     /* #endregion HTML */
 
 /* #endregion DOM elements */
+
+
+
+/* #region Media Queries */
+
+    /* When screen width >= 768px */
+    @media screen and (min-width: 768px) {
+
+        /* Apply bigger font size for page title */
+        .responsive-page-title {
+            /* Typography */
+            font-size: 4rem;
+        }
+
+        /* Apply a 2 columns layout to album cards */
+        .responsive-column {
+            /* Sizing */
+            width: calc(100% / 12 * 6);
+        }
+
+    }
+
+    /* When screen width >= 992px */
+    @media screen and (min-width: 992px) {
+
+        /* Apply bigger font size for page title */
+        .responsive-page-title {
+            /* Typography */
+            font-size: 5rem;
+        }
+
+        /* Apply a 3 columns layout to album cards */
+        .responsive-column {
+            /* Sizing */
+            width: calc(100% / 12 * 4);
+        }
+
+    }
+
+/* #endregion Media Queries */
