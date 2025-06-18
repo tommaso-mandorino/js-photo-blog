@@ -34,6 +34,9 @@
 
         // IF clicked element is a card image
         if (event.target.classList.contains('card-image')) {
+            
+            // Show clicked picture
+            overlayImageElement.src = event.target.src;
 
             // Hide scrollbars
             document.body.style.overflow = 'hidden';
@@ -43,7 +46,7 @@
 
         }
 
-    });
+    },this);
 
     // Overlay close button click event listener adding
     overlayCloseButtonElement.addEventListener('click', event => {
