@@ -71,6 +71,7 @@ fetchPictureData(ENDPOINT_URL, pictureObjectsArray, loadCards);
             // Album date
             const albumDate = album.date;
 
+            // Add new card to album HTML
             albumHTML +=
                 `
                 <!-- #region Album column -->
