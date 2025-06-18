@@ -32,11 +32,17 @@
     // Album click event listener adding
     albumElement.addEventListener('click', event => {
 
+        // Get clicked element
+        const clickedElement = event.target;
+
         // IF clicked element is a card image
-        if (event.target.classList.contains('card-image')) {
-            
+        if (clickedElement.classList.contains('card-image')) {
+
             // Show clicked picture
-            overlayImageElement.src = event.target.src;
+            overlayImageElement.src = clickedElement.src;
+
+            // Show clicked picture
+            overlayImageElement.alt = `${clickedElement.alt} ingrandita`;
 
             // Hide scrollbars
             document.body.style.overflow = 'hidden';

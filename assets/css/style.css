@@ -23,6 +23,9 @@
 
         /* Sizing */
         box-sizing: border-box;
+
+        /* Transitions */
+        transition: all 0.1s linear 0s;
     }
 
     /* Images */
@@ -115,7 +118,7 @@
                     flex-wrap: wrap;
 
                     /* Spacing */
-                    padding: 3rem 0;
+                    padding: 3rem 0 10rem;
 
                     /* #region Card */
                     .card {
@@ -133,13 +136,27 @@
                         /* Shadows */
                         box-shadow: 1px 1px 10px 0px black;
 
+                        /* On mouse hover */
+                        &:hover {
+                            /* Cursor */
+                            cursor: pointer;
+
+                            /* Positioning */
+                            z-index: 100;
+
+                            /* Effects */
+                            scale: 1.2;
+                            rotate: 10deg;
+                            box-shadow: 1px 1px 15px 5px black;
+                        }
+
                         /* Pin image */
                         .pin-image {
                             /* Positioning */
                             position: absolute;
                             top: 0;
                             left: 50%;
-                            transform: translateX(-50%);
+                            translate: -50% 0 0;
                         }
 
                         /* Card title */
