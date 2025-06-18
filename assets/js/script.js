@@ -1,19 +1,80 @@
-// Endpoint URL
-const ENDPOINT_URL = 'https://lanciweb.github.io/demo/api/pictures/';
+// #region Constants declaration section
 
-// Empty picture objects array declaration
-let pictureObjectsArray = [];
+    // Endpoint URL
+    const ENDPOINT_URL = 'https://lanciweb.github.io/demo/api/pictures/';
 
-// Fetch pictures from endpoint url,
-// place them into picture objects array
-// and then invoke callback function for loading cards
-fetchPictureData(ENDPOINT_URL, pictureObjectsArray, loadCards);
+    // #region DOM elements capturing
+
+        // Album DOM element
+        const albumElement = document.getElementById('album');
+
+        // #region Overlay DOM elements
+
+            // Overlay DOM element
+            const overlayElement = document.getElementById('overlay');
+
+            // Overlay close button DOM element
+            const overlayCloseButtonElement = document.getElementById('overlay-close-button');
+
+            // Overlay image DOM element
+            const overlayImageElement = document.getElementById('overlay-image');
+
+        // #region Overlay DOM elements
+
+    // #endregion DOM elements capturing
+
+// #region Constants declaration section
+
+
+
+// #region Event listener adding section
+
+    // Album click event listener adding
+    albumElement.addEventListener('click', event => {
+
+        // IF clicked element is a card image
+        if (event.target.classList.contains('card-image')) {
+
+            // Hide scrollbars
+            document.body.style.overflow = 'hidden';
+
+            // Set display to block
+            overlayElement.style.display = 'block';
+
+        }
+
+    });
+
+    // Overlay close button click event listener adding
+    overlayCloseButtonElement.addEventListener('click', event => {
+
+        // Show scrollbars again
+        document.body.style.overflow = 'auto';
+
+        // Set display to none
+        overlayElement.style.display = 'none';
+
+    });
+
+// #endregion Event listener adding section
+
+
+
+// #region Script logic
+
+    // Empty picture objects array declaration
+    let pictureObjectsArray = [];
+
+    // Fetch pictures from endpoint url,
+    // place them into picture objects array
+    // and then invoke callback function for loading cards
+    fetchPictureData(ENDPOINT_URL, pictureObjectsArray, loadCards);
+
+// #region Script logic
 
 
 
 // #region Function declaration section
-
-
 
     /**
      * Fetch pictures data
@@ -105,7 +166,5 @@ fetchPictureData(ENDPOINT_URL, pictureObjectsArray, loadCards);
         albumElement.innerHTML = albumHTML;
 
     }
-
-
 
 // #endregion Function declaration section

@@ -173,9 +173,12 @@
             /* #endregion Page main */
 
             /* #region Overlay */
-            .overlay {
+            #overlay {
+                /* Display */
+                display: none;
+
                 /* Positioning */
-                position: absolute;
+                position: fixed;
                 top: 0;
                 left: 0;
 
