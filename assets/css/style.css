@@ -25,7 +25,7 @@
         box-sizing: border-box;
 
         /* Transitions */
-        transition: all 0.1s linear 0s;
+        transition: all 0.2s linear 0s allow-discrete;
     }
 
     /* Images */
@@ -50,7 +50,7 @@
 
 
 
-/* #region Utility classes */
+/* #region Utility */
 
     /* Container */
     .container {
@@ -58,7 +58,7 @@
         max-width: 70%;
     }
 
-/* #endregion Utility classes */
+/* #endregion Utility */
 
 
 
@@ -194,6 +194,9 @@
                 /* Display */
                 display: none;
 
+                /* Opacity */
+                opacity: 0;
+
                 /* Positioning */
                 position: fixed;
                 top: 0;
@@ -205,7 +208,7 @@
                 height: 100%;
 
                 /* Colors */
-                background-color: rgba(0, 0, 0, 0.7);
+                background-color: rgba(0, 0, 0, 0.8);
 
                 /* Close button */
                 button {

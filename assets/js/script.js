@@ -50,6 +50,12 @@
             // Set display to block
             overlayElement.style.display = 'block';
 
+            // Force overlay element reflow
+            void overlayElement.offsetHeight;
+
+            // Set opacity to 1
+            overlayElement.style.opacity = '1';
+
         }
 
     },this);
@@ -59,6 +65,9 @@
 
         // Show scrollbars again
         document.body.style.overflow = 'auto';
+
+        // Set opacity to 0
+        overlayElement.style.opacity = '0';
 
         // Set display to none
         overlayElement.style.display = 'none';
