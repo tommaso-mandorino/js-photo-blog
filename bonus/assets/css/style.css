@@ -1,0 +1,347 @@
+/* #region Fonts importing */
+
+    /* Edu TAS Beginner */
+    @import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&display=swap');
+
+    /* Sometype Mono */
+    @import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* #endregion Fonts importing */
+
+
+
+/* #region Resets */
+
+    /* All elements */
+    * {
+        /* Spacing */
+        margin: 0;
+        padding: 0;
+
+        /* Borders */
+        border: 0;
+
+        /* Sizing */
+        box-sizing: border-box;
+
+        /* Transitions */
+        transition: all 0.2s linear 0s allow-discrete;
+    }
+
+    /* Images */
+    img {
+        /* Display */
+        display: block;
+
+        /* Sizing */
+        max-width: 100%;
+    }
+
+    /* Links */
+    a {
+        /* Typography */
+        text-decoration-line: none;
+
+        /* Colors */
+        color: inherit;
+    }
+
+    /* Buttons */
+    button {
+        /* Colors */
+        color: inherit;
+    }
+
+/* #endregion Resets */
+
+
+
+/* #region Utility */
+
+    /* Container */
+    .container {
+        margin: 0 auto;
+        max-width: 70%;
+    }
+
+/* #endregion Utility */
+
+
+
+/* #region DOM elements */
+
+    /* #region HTML */
+    html {
+        /* Typography */
+        font-size: 16px;
+
+        /* #region Body */
+        body {
+
+            /* Page header */
+            header {
+                /* Background */
+                background-image: url('../img/wall.png');
+
+                /* Spacing */
+                padding: 2rem;
+
+                /* Typography */
+                text-align: center;
+
+                /* Homepage link */
+                a {
+                    /* On hover */
+                    &:hover {
+                        /* Colors */
+                        color: firebrick;
+                    }
+
+                    /* Page title */
+                    h1 {
+                        /* Display */
+                        display: inline;
+
+                        /* Typography */
+                        text-transform: uppercase;
+                        font-family: 'Edu Tas Beginner', sans-serif;
+                        font-size: 3rem;
+                    }
+
+                }
+                
+            }
+
+            /* #region Page main */
+            main {
+                /* Background */
+                background-image: url('../img/cork.png');
+
+                /* #region Album grid row */
+                .row {
+                    /* Display */
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    /* Spacing */
+                    padding: 3rem 0 10rem;
+
+                    /* #region Card */
+                    .card {
+                        /* Positioning */
+                        position: relative;
+
+                        /* Spacing */
+                        margin: 1rem;
+                        padding: 1rem;
+
+                        /* Colors */
+                        background-color: white;
+                        color: black;
+
+                        /* Shadows */
+                        box-shadow: 1px 1px 10px 0px black;
+
+                        /* On mouse hover */
+                        &:hover {
+                            /* Cursor */
+                            cursor: pointer;
+
+                            /* Positioning */
+                            z-index: 100;
+
+                            /* Effects */
+                            scale: 1.2;
+                            rotate: 10deg;
+                            box-shadow: 1px 1px 15px 5px black;
+                        }
+
+                        /* Pin image */
+                        .pin-image {
+                            /* Positioning */
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            translate: -50% 0 0;
+                        }
+
+                        /* Card title */
+                        .card-title {
+                            /* Spacing */
+                            padding: 1rem 0 0.5rem;
+
+                            /* Typography */
+                            font-weight: lighter;
+                            font-family: 'Edu Tas Beginner', sans-serif;
+                        }
+
+                        /* Card date */
+                        .card-date {
+                            /* Display */
+                            display: inline-block;
+
+                            /* Spacing */
+                            padding: 0.5rem 0 1rem;
+
+                            /* Typography */
+                            font-family: 'Sometype Mono', monospace;
+                        }
+                    }
+                    /* #endregion Card */
+                    
+                }
+                /* #endregion Album grid row */               
+
+            }
+            /* #endregion Page main */
+
+            /* #region Overlay */
+            #overlay {
+                /* Display */
+                display: none;
+                flex-direction: column;
+
+                /* Opacity */
+                opacity: 0;
+
+                /* Positioning */
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1000;
+
+                /* Overflow */
+                overflow: auto;
+
+                /* Sizing */
+                width: 100%;
+                height: 100vh;
+
+                /* Colors */
+                background-color: rgba(0, 0, 0, 0.8);
+                color: white;
+
+                /* Buttons */
+                button {
+                    /* Cursor */
+                    cursor: pointer;
+
+                    /* Sizing */
+                    width: 6rem;
+                    height: 6rem;
+
+                    /* Typography */
+                    font-size: 5rem;
+
+                    /* Colors */
+                    background-color: transparent;
+                }
+
+                /* #region Top bar */
+                #overlay-top-bar {
+                    /* Typography */
+                    text-align: right;
+                }
+                /* #endregion Top bar */
+
+                /* #region Overlay gallery */
+                #overlay-gallery {
+                    
+                    /* Display */
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-grow: 1;
+
+                    /* #region Gallery center section */
+                    #gallery-center {
+
+                        /* Picture title */
+                        #album-title {
+                            /* Display */
+                            display: block;
+
+                            /* Spacing */
+                            padding: 1rem;
+
+                            /* Typography */
+                            text-align: center;
+                            font-size: 2rem;
+                            font-family: 'Edu Tas Beginner', sans-serif;
+                        }
+
+                        /* Overlay image */
+                        #album-image {
+                            /* Sizing */
+                            max-height: 70vh;
+                        }
+
+                        /* Picture date */
+                        #album-date {
+                            /* Display */
+                            display: block;
+
+                            /* Spacing */
+                            padding: 1rem;
+
+                            /* Typography */
+                            text-align: right;
+                            font-size: 1.5rem;
+                            font-family: 'Sometype Mono', monospace;
+                        }
+                    }
+                    /* #endregion Gallery center section */
+
+                }
+                /* #endregion Overlay gallery */
+
+            }
+            /* #endregion Overlay */
+
+        }
+        /* #endregion Body */
+
+    }
+    /* #endregion HTML */
+
+/* #endregion DOM elements */
+
+
+
+/* #region Media Queries */
+
+    /* When screen width >= 768px */
+    @media screen and (min-width: 768px) {
+
+        /* Apply bigger font size for page title */
+        .responsive-page-title {
+            /* Typography */
+            font-size: 4rem;
+        }
+
+        /* Apply a 2 columns layout to album cards */
+        .responsive-column {
+            /* Sizing */
+            width: calc(100% / 12 * 6);
+        }
+
+    }
+
+    /* When screen width >= 992px */
+    @media screen and (min-width: 992px) {
+
+        /* Apply bigger font size for page title */
+        .responsive-page-title {
+            /* Typography */
+            font-size: 5rem;
+        }
+
+        /* Apply a 3 columns layout to album cards */
+        .responsive-column {
+            /* Sizing */
+            width: calc(100% / 12 * 4);
+        }
+
+    }
+
+/* #endregion Media Queries */
